@@ -7,4 +7,6 @@ var c = arr;
 c[1] = 33;
 console.log(arr);
 //after this in arr at index 1 value is changed so basically c points to arr
-//somilar is with objects so we cannot make copies of array  or objects like this when working in react
+//similar is with objects so we cannot make copies of array  or objects like this when working in react
+
+//to copy arrays and objects we use spread ... operator
