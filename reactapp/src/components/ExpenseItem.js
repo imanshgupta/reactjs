@@ -1,8 +1,9 @@
 import "./ExpenseItem.css";
+import DateComp from "./DateComp";
 function ExpenseItem(prop) {
   return (
     <div className="div">
-      <div className="date">{prop.date.toString().substring(0, 15)}</div>
+      <DateComp className="date" date={prop.date} />
       <div className="innerdiv ">
         <p>{prop.reason}</p>
       </div>
