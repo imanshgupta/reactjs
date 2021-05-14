@@ -18,3 +18,4 @@ hellow=(...arg) => arg.sort();
 // return arg.sort();
 //this arg is an array that consists of all the parameters passed inside the function
 // }
+console.log(hellow(1,2,4,5,6));
