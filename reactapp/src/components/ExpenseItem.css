@@ -1,0 +1,12 @@
+.div {
+  background-color: rgb(148, 122, 122);
+  width: 300px;
+  height: 200px;
+}
+.innerdiv {
+  margin: 10px;
+  padding: auto;
+  color: blanchedalmond;
+  text-decoration: cornflowerblue;
+  font-size: large;
+}
