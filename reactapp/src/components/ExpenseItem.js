@@ -1,13 +1,14 @@
+import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
-import DateComp from "./DateComp";
-function ExpenseItem(prop) {
+
+function ExpenseItem(props) {
   return (
-    <div className="div">
-      <DateComp className="date" date={prop.date} />
-      <div className="innerdiv ">
-        <p>{prop.reason}</p>
+    <div className="expense-item">
+      <ExpenseDate date={props.date} />
+      <div className="expense-item__description">
+        <h2>{props.title}</h2>
+        <div className="expense-item__price">${props.amount}</div>
       </div>
-      <div className="cost">Rs{prop.price}</div>
     </div>
   );
 }
