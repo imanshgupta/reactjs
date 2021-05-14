@@ -1,13 +1,12 @@
 import "./ExpenseItem.css";
-var date = new Date();
-var today = date.getDate();
-function ExpenseItem() {
+function ExpenseItem(prop) {
   return (
     <div className="div">
-      <div className="innerdiv">
-        <p>The war of worlds</p>
+      <div className="date">{prop.date.toString().substring(0, 15)}</div>
+      <div className="innerdiv ">
+        <p>{prop.reason}</p>
       </div>
-      <p>written by me</p>
+      <div className="cost">Rs{prop.price}</div>
     </div>
   );
 }
