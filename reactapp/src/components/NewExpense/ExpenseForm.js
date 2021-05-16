@@ -13,13 +13,28 @@ const ExpenseForm = () => {
   const changedateHandeller = (event) => {
     changedate(event.target.value);
   };
+  const submitdata = (event) => {
+    event.preventDefault(); //to prevent the event from reloading the page
+    const expenseData = {
+      title: changedtitle,
+      amount: changedamount,
+      date: changeddate,
+    };
+    changetitle("");
+    changeamount("");
+    changedate("");
+  };
 
   return (
-    <form>
+    <form onSubmit={submitdata}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" onChange={titlechangeHandler} />
+          <input
+            type="text"
+            value={changedtitle}
+            onChange={titlechangeHandler}
+          />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
@@ -27,6 +42,7 @@ const ExpenseForm = () => {
             type="number"
             min="200"
             step="100"
+            value={changedamount}
             onChange={changeamountHander}
           />
         </div>
@@ -36,6 +52,7 @@ const ExpenseForm = () => {
             type="date"
             min="2021-01-01"
             max="22-01-01"
+            value={changeddate}
             onChange={changedateHandeller}
           />
         </div>
