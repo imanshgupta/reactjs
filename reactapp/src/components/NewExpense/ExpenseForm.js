@@ -1,28 +1,17 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 const ExpenseForm = () => {
-  const [newexpenses,updateexpense] = useState({
-    newtitle="",
-    newamount="",
-    newdate=""
-  })
+  const [changedtitle, changetitle] = useState("");
+  const [changedamount, changeamount] = useState("");
+  const [changeddate, changedate] = useState("");
   const titlechangeHandler = (event) => {
-   updateexpense({ 
-     ...newexpenses,
-     newtitle=event.target.value
-   })
+    changetitle(event.target.value);
   };
   const changeamountHander = (event) => {
-    changeamount({ 
-      ...newexpenses,
-      newamount=event.target.value
-    });
+    changeamount(event.target.value);
   };
   const changedateHandeller = (event) => {
-    changedate({ 
-      ...newexpenses,
-      newdate=event.target.value
-    });
+    changedate(event.target.value);
   };
 
   return (
