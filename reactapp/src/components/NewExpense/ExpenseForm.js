@@ -34,6 +34,7 @@ const ExpenseForm = (props) => {
             type="text"
             value={changedtitle}
             onChange={titlechangeHandler}
+            required
           />
         </div>
         <div className="new-expense__control">
@@ -44,6 +45,7 @@ const ExpenseForm = (props) => {
             step="100"
             value={changedamount}
             onChange={changeamountHander}
+            required
           />
         </div>
         <div className="new-expense__control">
@@ -54,6 +56,7 @@ const ExpenseForm = (props) => {
             max="22-01-01"
             value={changeddate}
             onChange={changedateHandeller}
+            required
           />
         </div>
       </div>

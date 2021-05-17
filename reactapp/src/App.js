@@ -29,9 +29,14 @@ function App() {
     },
   ];
 
+  const addnewexpense = (data) => {
+    const newexpensedata = {
+      ...data,
+    };
+  };
   return (
     <div>
-      <NewExpense></NewExpense>
+      <NewExpense takenewdata={addnewexpense}> </NewExpense>
       <Expenses items={expenses} />
     </div>
   );
