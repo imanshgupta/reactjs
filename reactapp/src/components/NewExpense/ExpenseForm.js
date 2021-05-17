@@ -24,7 +24,6 @@ const ExpenseForm = () => {
     changeamount("");
     changedate("");
   };
-
   return (
     <form onSubmit={submitdata}>
       <div className="new-expense__controls">
