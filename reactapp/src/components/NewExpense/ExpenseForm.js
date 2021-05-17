@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const [changedtitle, changetitle] = useState("");
   const [changedamount, changeamount] = useState("");
   const [changeddate, changedate] = useState("");
@@ -20,6 +20,7 @@ const ExpenseForm = () => {
       amount: changedamount,
       date: changeddate,
     };
+    props.onsaveHandeller(expenseData);
     changetitle("");
     changeamount("");
     changedate("");
