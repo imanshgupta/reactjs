@@ -20,7 +20,7 @@ const ExpenseForm = (props) => {
       amount: changedamount,
       date: changeddate,
     };
-    props.onsaveHandeller(expenseData);
+    props.onsaveexpensedata(expenseData);
     changetitle("");
     changeamount("");
     changedate("");
