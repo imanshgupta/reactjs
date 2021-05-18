@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var storage = {};
+      class Inventory {
+        constructor(item_code, name, quantity, price) {
+          this.item_code = item_code;
+          this.price = price;
+          this.quantity = quantity;
+          this.name = name;
+        }
+        additem = (item_code, price, quantity, name) => {
+          this.constructor(item_code, price, quantity, name);
+        };
+        alterquantity = (item_code, method, amount) => {
+          if ((method = "add")) {
+            this.quantity = this.quantity + amount;
+          } else if ((method = "" && this.quantity > 0)) {
+            this.quantity = this.quantity + amount;
+          } else {
+            console.log("NOT POSSIBLE");
+          }
+        };
+        printfullitem = () => {
+          console.log(this.item_code, this.price, this.quantity);
+          var a =document.getElementById("root").
+        }
+
+      }
+
+      var ob = new Inventory(01, "computer", 200, 70000);
+      ob.printfullitem();
+    </script>
+  </body>
+</html>
