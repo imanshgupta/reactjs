@@ -9,31 +9,17 @@
 <body>
     <form >
         <label for="naem">PRODUCT NAME</label>
-        <input type="text" name="name">
+        <input type="text" name="name" >
         <br>
         <Label>ID OF PRODUCT</Label>
-        <input type="text" name="id">
+        <input type="text" name="id" required>
         <br>
         <label> Price</label>
-        <input
-            type='number'
-            min='100'
-            step='100'
-            value='0'
-            name="price"  
-            required        
-            />
-            <br>
-            <label> Quantity</label>
-        <input
-            type='number'
-            min='1'
-            step='1'
-            value='0'
-            name="quantity"  
-            required
-            />
-            <br>
+        <input type='number'min='100'step='100'value='0'name="price" required />
+        <br>
+        <label> Quantity</label>
+        <input type='number'min='1'step='1'value='0'name="quantity" required/>
+        <br>
         <input type="button" value="Click to add to inventory" onclick="addnewitem(this.form)">
     </form>
     <br>
@@ -50,7 +36,6 @@
                     cost:cost,
                     quant:quantity,
                     total_value:()=>{return (cost*quantity)}
-    
                }
             }
         arr=[];
@@ -62,9 +47,9 @@
             var quantity=form.quantity.value;
             
             arr.push(createitems(name,id,price,quantity));
-            arr.map((values)=>{
+            arr.map((obj)=>{
                 var content = document.createElement('div');
-                const article="NAME:---------"+values.name+"<br>     ID OF PRODUCT------------"+values.id+"  <br>QUANTITY---------------"+values.quant+"<br>    cost-----------"+values.cost+"<br>"+"total:-------"+values.total_value();
+                const article="NAME:---------"+obj.name+"<br>     ID OF PRODUCT------------"+obj.id+"  <br>QUANTITY---------------"+obj.quant+"<br>    cost-----------"+obj.cost+"<br>"+"total:-------"+obj.total_value();
                 content.innerHTML='<div>'+article+"</div><br><hr>";
                 document.getElementById('root').append(content);  
 
