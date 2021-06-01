@@ -16,22 +16,6 @@
           this.quantity = quantity;
           this.name = name;
         }
-        additem = (item_code, price, quantity, name) => {
-          this.constructor(item_code, price, quantity, name);
-        };
-        alterquantity = (item_code, method, amount) => {
-          if ((method = "add")) {
-            this.quantity = this.quantity + amount;
-          } else if ((method = "" && this.quantity > 0)) {
-            this.quantity = this.quantity + amount;
-          } else {
-            console.log("NOT POSSIBLE");
-          }
-        };
-        printfullitem = () => {
-          console.log(this.item_code, this.price, this.quantity);
-        };
-
         ob = new Inventory(01, "computer", 200, 70000);
       }
     </script>

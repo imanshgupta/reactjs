@@ -7,40 +7,70 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="button" onclick="start()" value="click">
+    <form >
+        <label for="naem">PRODUCT NAME</label>
+        <input type="text" name="name">
+        <br>
+        <Label>ID OF PRODUCT</Label>
+        <input type="text" name="id">
+        <br>
+        <label> Price</label>
+        <input
+            type='number'
+            min='100'
+            step='100'
+            value='0'
+            name="price"          
+            />
+            <br>
+        <input type="button" value="Click to add to inventory">
+    </form>
+    <br>
+    <br>
+    <input type="button" onclick="start()" value="click to display current inventory">
     <div id="root">
 
     </div>
-<script>
-    function start(){
-
-  
-    function init(name,id,price,quant){
+    <script>
+        function start(){
         
-        return{
-            name:name,
-            id:id,
-            price:price,
-            quant:quant
+            function createitems(name,id,cost,quantity){
+                return{
+                    name:name,
+                    id:id,
+                    cost:cost,
+                    quant:quantity,
+                    total_value:()=>{return (cost*quantity)}
+    
+               }
+            }
+            
+            var a=createitems("laptop",001,100000,10);
+            var b=createitems("server",002,1200,34);
+            var c=createitems("keyboard",003,800,20);
+            var d=createitems("mouse",004,300,45);
+            var e=createitems("webcamera",005,1000,34);
+    
+            var total=a.total_value()+b.total_value()+c.total_value()+d.total_value()+e.total_value();
+            var content = document.createElement('div');
+            const article="NAME:---------"+a.name+"<br>     ID OF PRODUCT------------"+a.id+"  <br>QUANTITY---------------"+a.quant+"<br>    PRICE-----------"+a.price+"<br>"+"total:-------"+a.price*a.quant;
+        
+            const article2="NAME:--------"+b.name+"<br>    ID OF PRODUCT:------------"+b.id+" <br>  QUANTITY:--------------"+b.quant+" <br>   PRICE:----------"+b.price+"<br>"+"total:-------"+b.price*b.quant;
+            
+            const article3="NAME:--------"+c.name+"<br>    ID OF PRODUCT:------------"+c.id+" <br>  QUANTITY:--------------"+c.quant+" <br>   PRICE:----------"+c.price+"<br>"+"total:-------"+c.price*b.quant;
+    
+            const article4="NAME:--------"+d.name+"<br>    ID OF PRODUCT:------------"+d.id+" <br>  QUANTITY:--------------"+d.quant+" <br>   PRICE:----------"+d.price+"<br>"+"total:-------"+d.price*b.quant;
+    
+            const article5="NAME:--------"+e.name+"<br>    ID OF PRODUCT:------------"+e.id+" <br>  QUANTITY:--------------"+e.quant+" <br>   PRICE:----------"+e.price+"<br>"+"total:-------"+e.price*b.quant;
+    
+            content.innerHTML='<div>'+article+"</div><br><hr>"+'<div>'+article2+'</div><hr>'+'<div>'+article3+'</div><hr>'+'<div>'+article4+'</div><hr>'+'<div>'+article5+'</div><hr>'
+            
+            document.getElementById('root').append(content);        
+    
+            document.getElementById('root').append(`Total value of the inventory is ${total}`);
+    
         }
-    }
-      
-    var a = init("laptop",001,70000,6);
-    var b = init("books",002,300,45);
-    var c = init("keyboards",003,500,23);
-    
-    
-    var content=document.createElement('div');
-
-    const article="NAME:---------"+a.name+"<br>     ID OF PRODUCT------------"+a.id+"  <br>QUANTITY---------------"+a.quant+"<br>    PRICE-----------"+a.price+"<br>"+"total:-------"+a.price*a.quant;
-    
-    const article2="NAME:--------"+b.name+"<br>    ID OF PRODUCT:------------"+b.id+" <br>  QUANTITY:--------------"+b.quant+" <br>   PRICE:----------"+b.price+"<br>"+"total:-------"+b.price*b.quant;
-    
-    content.innerHTML='<div>'+article+"</div><br><hr>"+'<div>'+article2+'</div><hr>'
-    
-    document.getElementById('root').append(content);
-    }
-</script>
+        </script>
 
 
 </body>
