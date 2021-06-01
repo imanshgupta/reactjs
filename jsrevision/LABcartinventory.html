@@ -34,15 +34,15 @@
 
         var total=a.total_value()+b.total_value()+c.total_value()+d.total_value()+e.total_value();
         var content = document.createElement('div');
-        const article="NAME:---------"+a.name+"<br>     ID OF PRODUCT------------"+a.id+"  <br>QUANTITY---------------"+a.quant+"<br>    PRICE-----------"+a.price+"<br>"+"total:-------"+a.price*a.quant;
+        const article="NAME:---------"+a.name+"<br>     ID OF PRODUCT------------"+a.id+"  <br>QUANTITY---------------"+a.quant+"<br>    cost-----------"+a.cost+"<br>"+"total:-------"+a.total_value();
     
-        const article2="NAME:--------"+b.name+"<br>    ID OF PRODUCT:------------"+b.id+" <br>  QUANTITY:--------------"+b.quant+" <br>   PRICE:----------"+b.price+"<br>"+"total:-------"+b.price*b.quant;
+        const article2="NAME:--------"+b.name+"<br>    ID OF PRODUCT:------------"+b.id+" <br>  QUANTITY:--------------"+b.quant+" <br>   cost:----------"+b.cost+"<br>"+"total:-------"+b.total_value();
         
-        const article3="NAME:--------"+c.name+"<br>    ID OF PRODUCT:------------"+c.id+" <br>  QUANTITY:--------------"+c.quant+" <br>   PRICE:----------"+c.price+"<br>"+"total:-------"+c.price*b.quant;
+        const article3="NAME:--------"+c.name+"<br>    ID OF PRODUCT:------------"+c.id+" <br>  QUANTITY:--------------"+c.quant+" <br>   cost:----------"+c.cost+"<br>"+"total:-------"+c.total_value();
 
-        const article4="NAME:--------"+d.name+"<br>    ID OF PRODUCT:------------"+d.id+" <br>  QUANTITY:--------------"+d.quant+" <br>   PRICE:----------"+d.price+"<br>"+"total:-------"+d.price*b.quant;
+        const article4="NAME:--------"+d.name+"<br>    ID OF PRODUCT:------------"+d.id+" <br>  QUANTITY:--------------"+d.quant+" <br>   cost:----------"+d.cost+"<br>"+"total:-------"+d.total_value();
 
-        const article5="NAME:--------"+e.name+"<br>    ID OF PRODUCT:------------"+e.id+" <br>  QUANTITY:--------------"+e.quant+" <br>   PRICE:----------"+e.price+"<br>"+"total:-------"+e.price*b.quant;
+        const article5="NAME:--------"+e.name+"<br>    ID OF PRODUCT:------------"+e.id+" <br>  QUANTITY:--------------"+e.quant+" <br>   cost:----------"+e.cost+"<br>"+"total:-------"+e.total_value();
 
         content.innerHTML='<div>'+article+"</div><br><hr>"+'<div>'+article2+'</div><hr>'+'<div>'+article3+'</div><hr>'+'<div>'+article4+'</div><hr>'+'<div>'+article5+'</div><hr>'
         
